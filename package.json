@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "debug": "webpack",
-    "release": "webpack --config webpack.release.config.js",
+    "release": "webpack -p --config webpack.release.config.js",
     "start": "webpack-dev-server --open"
   },
   "keywords": [],
@@ -26,13 +26,12 @@
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^3.2.0",
     "less": "^2.7.2",
     "less-loader": "^4.1.0",
     "style-loader": "^0.21.0",
-    "webpack": "^4.6.0",
-    "webpack-cli": "^2.0.15",
-    "webpack-dev-server": "^3.1.3"
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1"
   }
 }

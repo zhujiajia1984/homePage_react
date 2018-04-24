@@ -1,6 +1,7 @@
 import React from 'react';
 import { Carousel } from 'antd';
 import './Home.less';
+import HomeHeader from '../../components/HomePlugin/HomeHeader/HomeHeader';
 
 //
 export default class Home extends React.Component {
@@ -30,11 +31,13 @@ export default class Home extends React.Component {
 							return <div key={item.key}>
 								<img src={item.url} 
 									style={{width: '100%', height: 600}}
+		
 								/>
 							</div>
 						})
 					}
 				</Carousel>
+				<HomeHeader></HomeHeader>
 				<div className="HomePageFooter">
 					abc
 				</div>

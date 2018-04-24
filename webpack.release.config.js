@@ -1,5 +1,6 @@
 // const
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -7,17 +8,12 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 // setting
 module.exports = {
     entry: {
-        main: ['./src/index.js']
+        main: ['./src/index.js'],
+        vendor: ['react', 'react-dom', 'react-router-dom']
     },
     output: {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
-    },
-    mode: 'production',
-    optimization: {
-        splitChunks: {
-            chunks: 'all'
-        }
     },
     module: {
         rules: [{
@@ -50,6 +46,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: '智启云平台',
             template: './src/html/index.html',
-        })
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: "vendor",
+            minChunks: Infinity,
+        }),
     ]
 }
