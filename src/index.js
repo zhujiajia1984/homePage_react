@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Button } from 'antd';
+import App from './App.js';
 
 ReactDOM.render(
-	<Button type="primary">Primary</Button>,
+	<App></App>,
 	document.getElementById('root')
 );
