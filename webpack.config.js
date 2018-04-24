@@ -9,6 +9,11 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
     },
     mode: 'development',
+    devServer: {
+        contentBase: [path.join(__dirname, "dist")],
+        port: 18301,
+        historyApiFallback: true,
+    },
     module: {
         rules: [{
             test: /\.(js|jsx)$/,
