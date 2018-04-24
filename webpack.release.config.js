@@ -5,7 +5,9 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 // setting
 module.exports = {
-    entry: ['./src/index.js'],
+    entry: {
+        main: ['./src/index.js']
+    },
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
@@ -18,6 +20,20 @@ module.exports = {
             use: {
                 loader: 'babel-loader',
             }
+        }, {
+            test: /\.less$/,
+            use: [{
+                loader: 'style-loader'
+            }, {
+                loader: 'css-loader'
+            }, {
+                loader: 'less-loader',
+                options: {
+                    modifyVars: {
+                        '@primary-color': '#1aad19',
+                    }
+                }
+            }]
         }, ]
     },
     plugins: [

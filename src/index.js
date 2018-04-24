@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Button } from 'antd';
 
 ReactDOM.render(
-	<h1>Hello, world!222</h1>,
+	<Button type="primary">Primary</Button>,
 	document.getElementById('root')
 );
