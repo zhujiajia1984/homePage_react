@@ -5,19 +5,12 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 // setting
 module.exports = {
-    entry: {
-        main: ['./src/index.js']
-    },
+    entry: ['./src/index.js'],
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
     },
-    mode: 'development',
-    devServer: {
-        contentBase: [path.join(__dirname, "dist")],
-        port: 18301,
-        historyApiFallback: true,
-    },
+    mode: 'production',
     module: {
         rules: [{
             test: /\.(js|jsx)$/,
