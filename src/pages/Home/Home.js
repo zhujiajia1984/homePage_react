@@ -22,6 +22,7 @@ export default class Home extends React.Component {
 	render() {
 		return (
 			<div className="HomePageStyle">
+				<HomeHeader></HomeHeader>
 				<Carousel className="HomePageCarousel"
 					autoplay={true}
 					autoplaySpeed={5000}
