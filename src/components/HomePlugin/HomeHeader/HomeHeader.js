@@ -10,7 +10,9 @@ export default class HomeHeader extends React.Component {
 	//
 	render() {
 		return (
-			<div className="HomeHeaderStyle">HomeHeader</div>
+			<div className="HomeHeaderStyle">
+				abc
+			</div>
 		);
 	}
 }

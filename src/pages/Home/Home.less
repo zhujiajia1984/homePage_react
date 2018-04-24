@@ -1,14 +1,41 @@
 // var
-@bannerHeight: 600px;
-@bannerBkColor: #364d79;
+@bannerHeight: 100%;
+@bannerBkColor: white;
 
+// style
 // css
-.HomePageStyle {
-	&>.ant-carousel {
-		&>.HomePageCarousel {
-			height: @bannerHeight;
-			background: @bannerBkColor;
-			overflow: hidden;
+#root {
+	height: 100%;
+	&>.AppFontFamily {
+		height: 100%;
+		.HomePageStyle {
+			height: 100%;
+			&>.ant-carousel {
+				height: 100%;
+				&>.HomePageCarousel {
+					height: 100%;
+					overflow: hidden;
+					&>.slick-list {
+						height: 100%;
+						&>.slick-track {
+							height: 100%;
+							.slick-slide {
+								div {
+									height: 100%;
+								}
+							}
+						}
+					}
+					.bannerImgSize {
+						height: 100%;
+						background: @bannerBkColor;
+						&>img {
+							height: 100%;
+							width: 100%;
+						}
+					}
+				}
+			}
 		}
 	}
 }

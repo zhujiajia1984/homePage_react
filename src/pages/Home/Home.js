@@ -28,19 +28,12 @@ export default class Home extends React.Component {
 				>
 					{
 						this.state.bannerImgs.map((item)=>{
-							return <div key={item.key}>
-								<img src={item.url} 
-									style={{width: '100%', height: 600}}
-		
-								/>
+							return <div key={item.key} className="bannerImgSize">
+								<img src={item.url} />
 							</div>
 						})
 					}
 				</Carousel>
-				<HomeHeader></HomeHeader>
-				<div className="HomePageFooter">
-					abc
-				</div>
 			</div>
 		);
 	}
