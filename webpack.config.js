@@ -1,5 +1,7 @@
 // const
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 // setting
 module.exports = {
@@ -22,5 +24,12 @@ module.exports = {
                 loader: 'babel-loader',
             }
         }, ]
-    }
+    },
+    plugins: [
+        new CleanWebpackPlugin(['dist']),
+        new HtmlWebpackPlugin({
+            title: 'home',
+            template: './src/html/index.html',
+        })
+    ]
 }
