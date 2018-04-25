@@ -10,10 +10,10 @@ export default class Home extends React.Component {
 		this.state = {
 			bannerImgs: [{
 				key: 1,
-				url: "https://weiquaninfo.cn/images/wxApp.jpg"
+				url: "https://weiquaninfo.cn/images/homepage/wxApp.jpg"
 			}, {
 				key: 2,
-				url: "https://weiquaninfo.cn/images/wxAccount.jpg"
+				url: "https://weiquaninfo.cn/images/homepage/wxAccount.jpg"
 			}]
 		}
 	}
