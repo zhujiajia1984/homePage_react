@@ -14,12 +14,12 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <div className="AppFontFamily">
-				<Router>
+            <Router>
+                <div className="AppFontFamily">
                     <Route exact path="/" component={Home} />
                     <Route path="/platform" component={Platform} />  
-				</Router>
-            </div>
+                </div>
+            </Router>
         );
     }
 }
